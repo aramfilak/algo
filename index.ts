@@ -1,5 +1,5 @@
-const sum  = ()=> {
-    return 1 + 2;
-}
+import * as fs from "node:fs";
 
-console.log(sum());
+for(let i = 0; i < 1000; i++) {
+  fs.writeFileSync(`./file-${i}.txt`, `Hello, World! ${i}`);
+}
